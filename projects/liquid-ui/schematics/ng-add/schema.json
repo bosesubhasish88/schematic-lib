@@ -1,0 +1,23 @@
+{
+    "properties": {
+        "doAutoSetup": {
+            "type": "boolean",
+            "x-prompt": "Would you like to import default settings?"
+        },
+        "importedModuleList": {
+            "type": "array",
+            "uniqueItems": true,
+            "x-prompt": {
+                "message": "Choose modules those need to be imported:",
+                "type": "list",
+                "multiselect": true,
+                "items": [
+                    { "value": "LiquidThemeModule", "label": "LiquidThemeModule [ Description: Default UI theme ]" },
+                    { "value": "LiquidImageGalleryModule", "label": "LiquidImageGalleryModule [ Description: Simple image gallery ]" },
+                    { "value": "LiquidGridModule", "label": "LiquidGridModule [ Description: Simple grid ]" },
+                    { "value": "LiquidAccordianModule", "label": "LiquidAccordianModule  [ Description: Simple accordian ]" }
+                ]
+            }
+        }
+    }
+}

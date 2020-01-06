@@ -1,0 +1,15 @@
+{
+    "name": "liquid-ui",
+    "version": "0.0.1",
+    "peerDependencies": {
+        "@angular/common": "^8.2.14",
+        "@angular/core": "^8.2.14"
+    },
+    "scripts": {
+        "build": "..\\..\\node_modules\\.bin\\tsc -p tsconfig.schematics.json",
+        "copy:schemas": "cp --parents schematics/*/schema.json ../../dist/liquid-ui/",
+        "copy:collection": "cp schematics/collection.json ../../dist/liquid-ui/schematics/collection.json",
+        "postbuild": "npm run copy:schemas && npm run copy:collection"
+    },
+    "schematics": "./schematics/collection.json"
+}
